@@ -1,6 +1,6 @@
 # Setup  
 
-1. Install Twilio CLI following [these instructions](https://www.twilio.com/docs/twilio-cli/quickstart) 
+1. [Install the Twilio CLI] (https://www.twilio.com/docs/twilio-cli/quickstart)
 1. Install the Infra Plugin for Twilio CLI 
 ```
 $ twilio plugins:install plugin-twilio-infra
