@@ -28,14 +28,14 @@ exports.handler = TokenValidator(async (context, event, callback) => {
                 taskAttributes: JSON.stringify({
                     to: customerNumber,
                     direction: 'outbound',
-                    name: 'Kaique Lupo',
+                    name: customerNumber,
                     from: TWILIO_PHONE_NUMBER,
                     autoAnswer: 'true'
                 }),
                 identity: `sms_${customerNumber}`,
                 chatFriendlyName: 'Outbound Chat with Kaique',
                 flexFlowSid: FLEX_FLOW_SID,
-                chatUserFriendlyName: 'Kaique Lupo'
+                chatUserFriendlyName: customerNumber
             });
 
         const session = await client.proxy.services(FLEX_PROXY_SERVICE_SID)
