@@ -9,8 +9,8 @@ Currently, outbound messages require additional development work presented in th
 
 # Setup  
 
-1. Install Twilio CLI following [these instructions](https://www.twilio.com/docs/twilio-cli/quickstart) 
-1. Install the Infra Plugin for Twilio CLI 
+1. [Install the Twilio CLI] (https://www.twilio.com/docs/twilio-cli/quickstart)
+1. Install the Infra Plugin for the Twilio CLI 
 ```
 $ twilio plugins:install plugin-twilio-infra
 ```
@@ -27,7 +27,7 @@ $ pulumi login --local
 ```
 $ twilio login
 ```
-6. Login to the project using
+6. Log in to the project using
 ```
 $ twilio profile:use <profile name>
 ```
@@ -46,14 +46,14 @@ $ twilio infra:environment:new <environment name>
 ```
 9. Deploy the solution using: 
 ```
-$ twilio infra:deploy
+$ TWILIO_AUTH_TOKEN=xxxxxx twilio infra:deploy
 ```
 10. In the Twilio [Console Settings page for Flex](https://www.twilio.com/console/flex/settings) make sure that the "Enable Dialpad" is Enabled
 
 # Usage 
-1. In Flex click the dialpad button (next to the microhpne on the top right corner). At the bottom of the dialpad you will find the "Outbound SMS" section. 
-1. Type the destination number and press on START
-1. A new Task / Reservation is generated: Click the accept button to accept and start chatting 
+1. In Flex, click the Dialpad button (next to the microphone on the top right corner). At the bottom of the Dialpad, you will find the additional "Outbound SMS" text field. 
+1. Enter the destination number and click "Start".
+1. Clicking start generates a new [Task](https://www.twilio.com/docs/flex/admin-guide/core-concepts/routing#tasks). Click "Accept" to accept the incoming task and start a messaging conversation with the customer.  
 
 # Changelog
 
