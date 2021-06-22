@@ -113,4 +113,7 @@ dist
 
 .twilio-functions
 .*.env
+.env.*
 .DS_Store
+.twilio-infra
+package.local.json

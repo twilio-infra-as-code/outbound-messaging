@@ -61,7 +61,6 @@ const serverless = new Serverless("outbound-sms-functions-assets", {
     attributes: {
         cwd: `../serverless/main`,
         serviceName,
-        envPath: `.${stack}.env`,
         env: {
             FLEX_FLOW_SID: outboundSMSFlexFlow.sid,
             FLEX_PROXY_SERVICE_SID,
@@ -82,7 +81,12 @@ const outboundSmsFlexPlugin = new FlexPlugin("outbound-sms-flex-plugin", {
             {
                 REACT_APP_SERVICE_BASE_URL: `https://${domain}`
             }
-        ))
+        )),
+        description: "This plugin allows to create outbound messaging chat from the Flex interface",
+        release: {
+            name: "Last version of the plugin",
+            description: "Deployed using Infra as code"
+        }
     }
 });
  
