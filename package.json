@@ -1,15 +1,13 @@
 {
   "name": "outbound-messaging",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "deploy-resources": "export $(cat .$BRANCH_NAME.env | xargs) && pulumi up --stack $BRANCH_NAME",
-    "preview-resources": "export $(cat .$BRANCH_NAME.env | xargs) && pulumi preview --stack $BRANCH_NAME",
     "ci:deploy-resources": "pulumi up --stack $BRANCH_NAME --yes --skip-preview"
   },
   "dependencies": {
-    "@pulumi/pulumi": "^2.0.0",
-    "twilio-pulumi-provider": "^0.0.8"
+    "@pulumi/pulumi": "^3.0.0",
+    "twilio-pulumi-provider": "^0.0.12"
   },
   "devDependencies": {
     "@types/node": "^14.6.4",

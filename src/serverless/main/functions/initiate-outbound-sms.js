@@ -33,7 +33,7 @@ exports.handler = TokenValidator(async (context, event, callback) => {
                     autoAnswer: 'true'
                 }),
                 identity: `sms_${customerNumber}`,
-                chatFriendlyName: 'Outbound Chat with Kaique',
+                chatFriendlyName: `Outbound Chat with ${customerNumber}`,
                 flexFlowSid: FLEX_FLOW_SID,
                 chatUserFriendlyName: customerNumber
             });
